@@ -1,9 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/Linkedi.astro';
+import Github from '../components/icons/Github.astro';
+import Main from '../components/icons/Main.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import SocialPill from '../components/SocialPill.astro'
+import Experience from '../components/Experience.astro';
+import SectioContainer from '../components/SectioContainer.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<h1>Cv masaquiza</h1>	
+<Layout 
+	title="Portafolio de Luis Javier Masaquiza - Desarrollado y Analista"
+	description="contra un desarrollado y aun analista de daqtos "
+	>
+	<main>
+		<SectioContainer class="py-44 pb-24">
+			<img class="rounded-full size-12 mb-4" src='https://media.licdn.com/dms/image/D4D03AQErqdkBJj4Zrw/profile-displayphoto-shrink_400_400/0/1701248713049?e=1713398400&v=beta&t=P8GdO1B0Y2b3FMVpH9OUWp79s7twkWjDZ7zShuQiN4c' alt="Luis Masaquiza foto" />
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hola, soy Luis Javier Masaquiza<a href="https://linkdin.com/in/javier-masaquiza" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
+			<h2 class="text-2xl text-wrap"><span>Con 3 años de experiencia.</span><span class="text-yellow-200/90">Analista de datos y automatizaciones con "Python" y Desarollo Web con React,Astro,Next</span>
+				Vivo en <span class="text-yellow-200/90">Andalucioa, España 🇪🇸</span>. Especializado Produccion Manger
+			</h2>
+
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://linkedin.com/in/luismasaquiza">
+					<LinkedInIcon class="w-6 h-6" />
+    					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/in/luismasaquiza">
+					<Github class="w-6 h-6" />
+    					GitHub
+				</SocialPill>
+				<SocialPill href="https://lm@gmail.com/in/luismasaquiza">
+					<Main class="size-6" />
+    					luisfmasaquiza@hotmail.com
+				</SocialPill>
+			</nav>
+		</SectioContainer>
+		<SectioContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-8" />
+				Experiencia laboral</h2>
+			
+			<Experience />
+		</SectioContainer>
+	</main>
 </Layout>
 
